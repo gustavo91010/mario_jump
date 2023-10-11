@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    /*
+    position: relative; deve ser algum relacionamento enre as imagens
+ 
+    80% da tela
+    altura de 500 px
+    overflow: hidden; para o que sair do quadro nao seja mais visivel a tela( no caso, quando a imagem do cano estiver em rigth 100%
+    */
+}
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+
+    
+    animation: pipe-animation 2s infinite linear;
+    /*
+
+    position: absolute; para que as imagens nao interfiram um anas outras
+    bottom: 0; colocando as imagens na parte de baixo
+    width: 80px; tamanho do cano
+    right: 50%; determina o posicionamento da imagem vindo da direita para a esquerda medida por %, ex: 0 %, 50 %, onde 100% ele ate sai da tela
+subistitir o right pela animação:
+    animation: 
+    pipe-animation -> defini a animação e la defini o right
+        2s -> o tempo da animação
+        infinite -> a quantidade de repetição
+        linear; -> a velicidade... 
+
+
+    */
+}
+
+.mario_css{
+
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump_css{
+    animation: jump_animacao 500ms ease-out;
+    /*
+    quando eu quiser que o mario pule, eu ponho essa classe na imagem do jtml
+    ease-out ele vai pular instantaneamente e cair mais suave
+    */
+
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80%;
+    }to{
+        right: 100%;
+    }
+
+    /*keyframes determina as animações
+    from{ de onde vai comecar } to { ate onde...}
+    right: -80px; comecando aqui para que ele venha de fora da caixa
+    */
+}
+
+@keyframes jump_animacao {
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+
+    }
+    100%{
+        bottom: 0;
+    }
+    
+}
