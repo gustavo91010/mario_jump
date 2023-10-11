@@ -35,6 +35,16 @@ if(pipe_position <= 120 && pipe_position> 0 && marioPosition< 90){
     
     pipe_elemento.style.left= `${pipe_position}px`
     // quando o tubo bater, vai ficar junto com ele...
+
+    mario_elemento.style.animation= 'none'
+    mario_elemento.style.bottom= `${marioPosition}px`
+    // com isso, a animação vai parar e ele vai ficar exatamente no ponto em que tocou no cano
+
+    mario_elemento.src='imagens/game-over.png'
+    mario_elemento.style.width= '75px'
+    mario_elemento.style.marginLeft= '50px'
+
+clearInterval(loop) // para encerrar o loop que roda o jogo quando der game over
 }
 
 }, 10);

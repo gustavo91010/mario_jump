@@ -5,14 +5,20 @@
 }
 
 .game-board{
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 15px solid rgb(45,160,15);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#87CEEB, #e0f6ff);
 
     /*
+    em dev:     width: 80%;
+    border: 1px solid #333;
+
+
+    Para lembrar:
     position: relative; deve ser algum relacionamento enre as imagens
  
     80% da tela
@@ -54,11 +60,17 @@ subistitir o right pela animação:
 }
 
 .jump_css{
-    animation: jump_animacao 500ms ease-out;
+    animation: jump_animation 500ms ease-out;
     /*
     quando eu quiser que o mario pule, eu ponho essa classe na imagem do jtml
     ease-out ele vai pular instantaneamente e cair mais suave
     */
+
+}
+.clouds_css{
+    position: absolute;
+    width: 550px;
+    animation: clouds_animation 20s linear;
 
 }
 
@@ -75,7 +87,7 @@ subistitir o right pela animação:
     */
 }
 
-@keyframes jump_animacao {
+@keyframes jump_animation {
     0%{
         bottom: 0;
     }
@@ -92,6 +104,16 @@ subistitir o right pela animação:
     }
     100%{
         bottom: 0;
+    }
+    
+}
+
+@keyframes clouds_animation {
+    from{
+        right: -550px;
+
+    }to{
+        right: 100%;
     }
     
 }
