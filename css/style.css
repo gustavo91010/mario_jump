@@ -20,14 +20,15 @@
     overflow: hidden; para o que sair do quadro nao seja mais visivel a tela( no caso, quando a imagem do cano estiver em rigth 100%
     */
 }
-.pipe{
+.pipe_css{
     position: absolute;
     bottom: 0;
     width: 70px;
-
     
-    animation: pipe-animation 2s infinite linear;
+    
+    animation: pipe-animation 1.5s infinite linear;
     /*
+    left: 120px;
 
     position: absolute; para que as imagens nao interfiram um anas outras
     bottom: 0; colocando as imagens na parte de baixo
@@ -39,6 +40,7 @@ subistitir o right pela animação:
         2s -> o tempo da animação
         infinite -> a quantidade de repetição
         linear; -> a velicidade... 
+     left: 120px; é a distancia que o pipe encosta no mario, se ele nao tiver pulado, ele tem que perder
 
 
     */
@@ -48,7 +50,7 @@ subistitir o right pela animação:
 
     width: 150px;
     position: absolute;
-    bottom: 0;
+    bottom: 0
 }
 
 .jump_css{
